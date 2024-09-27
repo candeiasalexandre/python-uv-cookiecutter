@@ -22,12 +22,12 @@ FROM base AS runtime
 
 WORKDIR /app
 
-COPY --from=build --chown=app:app /app/dist/{{cookiecutter.__project_name_kebab}}-*.whl .
+COPY --from=build --chown=app:app /app/dist/{{cookiecutter.__project_name_snake}}-*.whl .
 
 RUN --mount=from=ghcr.io/astral-sh/uv,source=/uv,target=/bin/uv \
     --mount=type=cache,target=/root/.cache/uv \
-    uv pip install --system {{cookiecutter.__project_name_kebab}}-*.whl
+    uv pip install --system {{cookiecutter.__project_name_snake}}-*.whl
 
-RUN rm {{cookiecutter.__project_name_kebab}}-*.whl
+RUN rm {{cookiecutter.__project_name_snake}}-*.whl
   
 CMD ["{{cookiecutter.__project_name_kebab}}"]

@@ -1,8 +1,10 @@
 [project]
-name = "{{cookiecutter.__project_name_snake}}"
+name = "{{cookiecutter.__project_name_kebab}}"
 version = "0.1.0"
 description = "{{cookiecutter.description}}"
-authors = ["{{cookiecutter.owner}} <{{cookiecutter.email}}>"]
+authors = [
+    {name="{{cookiecutter.owner}}", emial="<{{cookiecutter.email}}>"}
+]
 requires-python = ">={{cookiecutter.python_version}}"
 dependencies = [
     "typer>=0.12.5",
