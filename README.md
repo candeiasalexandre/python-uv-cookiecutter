@@ -12,5 +12,5 @@ The project will use the following tooling:
 ## How to use
 
 1. `pipx install cookiecutter`
-2. `cookiecutter [git@github.com:candeiasalexandre/python-uv-cookiecutter.git](https://github.com/candeiasalexandre/python-uv-cookiecutter.git)`
+2. `cookiecutter https://github.com/candeiasalexandre/python-uv-cookiecutter.git`
 3. `check created project README.md`
